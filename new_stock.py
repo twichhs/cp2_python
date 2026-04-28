@@ -863,7 +863,7 @@ class Relatorio:
             with open(arquivo, 'w', encoding='utf-8') as f:
                 json.dump(dados, f, indent=4, ensure_ascii=False)
 
-            print(f"✅ Relatório de vendas salvo com sucesso em '{arquivo}'.")
+            print(f"Relatório de vendas salvo com sucesso em '{arquivo}'.")
 
         except (IOError, OSError) as e:
             print(f"Erro ao salvar relatório: {e}")
@@ -891,7 +891,7 @@ class Relatorio:
             # Reconstrói o histórico de vendas em formato simplificado
             self.vendas_registradas = dados.get("vendas_registradas", [])
 
-            print(f"✅ Relatório de vendas carregado com sucesso de '{arquivo}'.")
+            print(f"Relatório de vendas carregado com sucesso de '{arquivo}'.")
             return True
 
         except json.JSONDecodeError:
